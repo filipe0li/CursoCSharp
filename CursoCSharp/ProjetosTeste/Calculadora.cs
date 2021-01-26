@@ -1,8 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
-namespace CursoCSharp
+namespace CursoCSharp.ProjetosTeste
 {
-    public class Calculadora
+    class Calculadora
     {
         public static void Executar()
         {

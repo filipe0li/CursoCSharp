@@ -1,14 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
 
+using CursoCSharp.ProjetosTeste;
 using CursoCSharp.Fundamentos;  // Chamado para class (pasta) Fundamentos.
-using CursoCSharp.EstruturasDeControle;  // Chamado para class (pasta) EstruturasDeControle.
-using CursoCSharp.ClassesEMetodos;  // Chamado para class (pasta) ClassesEMetodos.
+using CursoCSharp.EstruturasDeControle;
+using CursoCSharp.ClassesEMetodos;
 
 namespace CursoCSharp {
     class Program {
-        static void Main(string[] args) {   // Porta de entrada C#. Só pode haver 1.
+        static void Main(string[] args) {   // Main é a porta de entrada C#. Só pode haver 1.
             var central = new CentralDeExercicios(new Dictionary<string, Action>() {
+
+                // Projetos
+                {"Calculadora - Projetos", Calculadora.Executar},
+                {"Jogo da Forca - Projetos", JogoDaForca.Executar},
 
                 // Fundamentos
                 {"Primeiro Programa - Fundamentos", PrimeiroPrograma.Executar},
@@ -46,9 +51,10 @@ namespace CursoCSharp {
                 {"Métodos Estaticos - Classes e Métodos", MetodosEstaticos.Executar},
                 {"Atributos Estaticos - Classes e Métodos", AtributosEstaticos.Executar},
                 {"Desafio Atributo - Classes e Métodos", DesafioAtributo.Executar},
+                {"Params - Classes e Métodos", Params.Executar},
+                {"Parametros Nomeados - Classes e Métodos", ParametrosNomeados.Executar},
+                {"Get Set - Classes e Métodos", GetSet.Executar},
 
-                // Projetos
-                {"Calculadora - Projetos", Calculadora.Executar},
             });
 
             central.SelecionarEExecutar();
