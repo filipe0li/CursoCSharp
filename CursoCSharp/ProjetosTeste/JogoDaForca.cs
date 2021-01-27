@@ -35,8 +35,7 @@ namespace CursoCSharp.ProjetosTeste
             char[] letrasDigitadas = new char[numeroDeChances + numeroDeLetrasSecretas];  // Alfabeto possui 26 letras.
             byte numeroDeTentativa = 0;
 
-            Console.WriteLine(secreta); //  Imprime secreta em forma de '-'
-            Console.WriteLine($"\nA palavra secreta possui {numeroDeLetrasSecretas} letras.\nVocê possui {numeroDeChances} chances!"); // Dicas
+            Console.WriteLine($"{new string(secreta)}\nA palavra secreta possui {numeroDeLetrasSecretas} letras.\nVocê possui {numeroDeChances} chances!"); // new string converte array char em string    //  Imprime secreta em forma de '-'
 
             while (numeroDeChances > 0 && Array.Exists(secreta, element => element == '-')) // Regra número de chances > 0 e não ter acertado a palavraChave
             {
@@ -70,7 +69,7 @@ namespace CursoCSharp.ProjetosTeste
                     i++;
                 }
 
-                Console.WriteLine(secreta); // Imprime palavra atualizada.
+                Console.WriteLine(new string(secreta)); // Imprime palavra atualizada.
 
                 if (!acerto)
                 {
@@ -78,9 +77,7 @@ namespace CursoCSharp.ProjetosTeste
                 }
                 if (numeroDeChances > 0)
                 {
-                    Console.Write("Letras digitadas: ");
-                    Console.WriteLine(letrasDigitadas);
-                    Console.WriteLine($"\nA palavra secreta possui {numeroDeLetrasSecretas} letras.\nVocê possui {numeroDeChances} chances!");
+                    Console.Write($"Letras digitadas: {new string(letrasDigitadas)}\nA palavra secreta possui {numeroDeLetrasSecretas} letras.\nVocê possui {numeroDeChances} chances!");
                 }
             }
 

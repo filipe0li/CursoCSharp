@@ -5,10 +5,12 @@ using CursoCSharp.ProjetosTeste;
 using CursoCSharp.Fundamentos;  // Chamado para class (pasta) Fundamentos.
 using CursoCSharp.EstruturasDeControle;
 using CursoCSharp.ClassesEMetodos;
+using CursoCSharp.Colecoes;
 
 namespace CursoCSharp {
     class Program {
-        static void Main(string[] args) {   // Main é a porta de entrada C#. Só pode haver 1.
+        static void Main(string[] args) // Main é a porta de entrada C#. Só pode haver 1.   // string[] args server para comandos no terminal.
+        {
             var central = new CentralDeExercicios(new Dictionary<string, Action>() {
 
                 // Projetos
@@ -54,6 +56,22 @@ namespace CursoCSharp {
                 {"Params - Classes e Métodos", Params.Executar},
                 {"Parametros Nomeados - Classes e Métodos", ParametrosNomeados.Executar},
                 {"Get Set - Classes e Métodos", GetSet.Executar},
+                {"Props - Classes e Métodos", Props.Executar},
+                {"ReadOnly - Classes e Métodos", ReadOnly.Executar},
+                {"Exemplo Enum - Classes e Métodos", ExemploEnum.Executar},
+                {"Exemplo Struct - Classes e Métodos", ExemploStruct.Executar},
+                {"Stuct vs Classe - Classes e Métodos", StuctVsClasse.Executar},
+                {"Valor vs Referência - Classes e Métodos", ValorVsReferencia.Executar},
+                {"Parâmetros por Referência - Classes e Métodos", ParametrosPorReferencia.Executar},
+                {"Parâmetros com valor Padrão - Classes e Métodos", ParametroPadrao.Executar},
+
+                // Coleções
+                {"Array - Coleções", Colecoes.Array.Executar},  // Nome Array já esta atribuido ao sistema. Nescesário dizer qual arquivo vc quer.
+                {"List - Coleções", ColecoesList.Executar},
+                {"Array List - Coleções", ColecoesArrayList.Executar},
+                {"Set (HashSet) - Coleções", ColecoesSet.Executar},
+                {"Queue (Fila) - Coleções", ColecoesQueue.Executar},
+                {"Igualdade - Coleções", Igualdade.Executar},
 
             });
 

@@ -6,7 +6,7 @@ namespace CursoCSharp.ClassesEMetodos
 {
     public class Moto
     {
-        private string Marca;
+        private string Marca; // Se não colocar nada já é privado!
         private string Modelo;
         private uint Cilindrada;    // uint não aceita valores negativos.
 
