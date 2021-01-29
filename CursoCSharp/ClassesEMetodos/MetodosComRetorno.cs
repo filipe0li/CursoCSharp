@@ -62,7 +62,7 @@ namespace CursoCSharp.ClassesEMetodos
             return memoria;
         }
     }
-        class MetodosComRetorno
+    class MetodosComRetorno
     {
         public static void Executar()
         {

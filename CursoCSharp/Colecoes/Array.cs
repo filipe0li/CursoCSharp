@@ -21,7 +21,7 @@ namespace CursoCSharp.Colecoes
             }
 
             double somatorio = 0;
-            double[] notas =  {9.7, 4.8, 8.4, 8.2, 6.8};
+            double[] notas = { 9.7, 4.8, 8.4, 8.2, 6.8 };
 
             // Jeito fácil
             foreach (double nota in notas)
@@ -38,7 +38,7 @@ namespace CursoCSharp.Colecoes
             double media = somatorio / notas.Length;
             Console.WriteLine(media);
 
-            char[] letras = {'A', 'r', 'r', 'a', 'y'};
+            char[] letras = { 'A', 'r', 'r', 'a', 'y' };
             Console.WriteLine(new string(letras));  // new string converte array char em string
         }
     }

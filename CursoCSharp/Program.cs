@@ -6,15 +6,19 @@ using CursoCSharp.Fundamentos;  // Chamado para class (pasta) Fundamentos.
 using CursoCSharp.EstruturasDeControle;
 using CursoCSharp.ClassesEMetodos;
 using CursoCSharp.Colecoes;
+using CursoCSharp.OO;
+using CursoCSharp.MetodosEFuncoes;
 
-namespace CursoCSharp {
-    class Program {
+namespace CursoCSharp
+{
+    class Program
+    {
         static void Main(string[] args) // Main é a porta de entrada C#. Só pode haver 1.   // string[] args server para comandos no terminal.
         {
             var central = new CentralDeExercicios(new Dictionary<string, Action>() {
 
                 // Projetos
-                {"Calculadora - Projetos", Calculadora.Executar},
+                {"Calculadora - Projetos", ProjetosTeste.Calculadora.Executar},
                 {"Jogo da Forca - Projetos", JogoDaForca.Executar},
 
                 // Fundamentos
@@ -66,16 +70,31 @@ namespace CursoCSharp {
                 {"Parâmetros com valor Padrão - Classes e Métodos", ParametroPadrao.Executar},
 
                 // Coleções
-                {"Array - Coleções", Colecoes.Array.Executar},  // Nome Array já esta atribuido ao sistema. Nescesário dizer qual arquivo vc quer.
+                {"Array - Coleções", Colecoes.Array.Executar},  // Nome Array já esta atribuido ao sistema. Nescesário dizer qual arquivo você quer.
                 {"List - Coleções", ColecoesList.Executar},
                 {"Array List - Coleções", ColecoesArrayList.Executar},
                 {"Set (HashSet) - Coleções", ColecoesSet.Executar},
                 {"Queue (Fila) - Coleções", ColecoesQueue.Executar},
                 {"Igualdade - Coleções", Igualdade.Executar},
+                {"Stack (Pilha) - Coleções", ColecaoStack.Executar},
+                {"Dictionary - Coleções", ColocoesDictionary.Executar},
+
+                // OO
+                {"Herança - OO", Heranca.Executar},
+                {"Construtor This - OO", ConstrutorThis.Executar},
+                {"Encapsulamento - OO", OO.Encapsulamento.Executar},
+                {"Polimorfismo - OO", Polimorfismo.Executar},
+                {"Abstract - OO", Abstract.Executar},
+                {"Interface - OO", Interface.Executar},
+                {"Sealed - OO", Sealed.Executar},
+
+                // 
+                {"Lambda - Métodos & Funções", ExemploLambda.Executar},
 
             });
 
             central.SelecionarEExecutar();
+            Console.Write("Pressione qualquer tecla para continuar. . . "); Console.ReadLine();
         }
     }
 }

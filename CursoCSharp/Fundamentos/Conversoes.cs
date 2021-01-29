@@ -13,7 +13,7 @@ namespace CursoCSharp.Fundamentos
             Console.WriteLine(quebrado);
 
             double nota = 9.7;
-            int notaTruncada = (int) nota;  /*  Casting => Nesta conversão de double para int, há perca de informação, pois o double tem maior capacidade que o int.
+            int notaTruncada = (int)nota;  /*  Casting => Nesta conversão de double para int, há perca de informação, pois o double tem maior capacidade que o int.
                                              *  Então é necessário especificar colocando (int), para forçar a converção. */
             Console.WriteLine($"Nota truncada: {notaTruncada}");
 

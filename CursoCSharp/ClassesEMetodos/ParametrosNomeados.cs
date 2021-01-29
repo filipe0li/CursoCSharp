@@ -12,7 +12,7 @@ namespace CursoCSharp.ClassesEMetodos
         }
         public static void Executar()
         {
-            Formatar(8,8,1991); // Mesma coisa, mas com risco de misturar os valores.
+            Formatar(8, 8, 1991); // Mesma coisa, mas com risco de misturar os valores.
             Formatar(1991, 8, 8);   // Exemplo de bagunça por errar a ordem dos parâmetros.
             Formatar(ano: 1991, dia: 08, mes: 08); // Quando coloco o parâmetro dia: estou me referindo diratamente a int dia e não preciso me preoculpar com a ordem.
         }

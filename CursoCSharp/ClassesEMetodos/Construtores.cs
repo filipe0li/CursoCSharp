@@ -38,9 +38,9 @@ namespace CursoCSharp.ClassesEMetodos
 
             var carro3 = new Carro()
             {
-            Fabricante = "Fiat",
-            Modelo = "Uno",
-            Ano = 2019,
+                Fabricante = "Fiat",
+                Modelo = "Uno",
+                Ano = 2019,
             };
             Console.WriteLine($"{carro3.Fabricante}\t{carro3.Modelo}\t{carro3.Ano}");   // Não utiliza construtor nunhum.
         }
