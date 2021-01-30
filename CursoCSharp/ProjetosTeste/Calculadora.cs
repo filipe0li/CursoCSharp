@@ -9,18 +9,39 @@ namespace CursoCSharp.ProjetosTeste
         public static void Executar()
         {
         Inicio: // Marcador.
+            double valor1;
+            double valor2;
+            char operador = '0';
             Console.Clear();  // Limpa tela.
+
             Console.Write("Digite o primeiro valor: ");
-            double valor1 = double.Parse(Console.ReadLine()); // .Parse só converte de string.
+        valor1:
+            try
+            {
+                valor1 = double.Parse(Console.ReadLine()); // .Parse só converte de string.
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Apenas números!");
+                goto valor1;
+            }
 
             Console.Write("Escolha a opração ( + - x / ): ");
-            char operador = char.Parse(Console.ReadLine().ToLower());
+            try
+            {
+                operador = char.Parse(Console.ReadLine().ToLower());
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Operador possui apenas 1 caractere!");
+            }
+            
             Confere(operador);
 
-            void Confere(char operador)
+            void Confere(char op)
             {
                 char[] operadores = { '+', '-', 'x', '/' };
-                if (!Array.Exists(operadores, element => element == operador))
+                if (!Array.Exists(operadores, element => element == op))
                 {
                     Console.WriteLine("Digite um operador válido!");
                     operador = char.Parse(Console.ReadLine().ToLower());
@@ -29,14 +50,22 @@ namespace CursoCSharp.ProjetosTeste
             }
 
             Console.Write("Digite o segundo valor: ");
-            double valor2 = double.Parse(Console.ReadLine());
-
+        valor2:
+            try
+            {
+                valor2 = double.Parse(Console.ReadLine()); // .Parse só converte de string.
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Apenas números!");
+                goto valor2;
+            }
             double resultado = 0;
 
             switch (operador)
             {
                 default:
-                    Console.WriteLine("Erro, opção inválida!");
+                    Console.WriteLine($"Erro, {operador} não é uma opção inválida!");
                     break;
                 case '+':
                     resultado = valor1 + valor2;
@@ -61,11 +90,11 @@ namespace CursoCSharp.ProjetosTeste
                         Console.WriteLine("Impossivel dividir por 0");
                     }
                     break;
-
             }
+
             Console.Write("Deseja continuar calculando ( S / N )? ");
-            char opcao = char.Parse(Console.ReadLine().ToLower());
-            if (opcao == 's')
+            string opcao = Console.ReadLine().ToLower();
+            if (opcao == "s")
             {
                 goto Inicio;
             }

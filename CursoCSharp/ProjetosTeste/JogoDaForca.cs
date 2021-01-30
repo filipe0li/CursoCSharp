@@ -34,6 +34,7 @@ namespace CursoCSharp.ProjetosTeste
             int numeroDeChances = numeroDeLetrasSecretas + 2;  // Regra para número de chances.
             char[] letrasDigitadas = new char[numeroDeChances + numeroDeLetrasSecretas];  // Alfabeto possui 26 letras.
             byte numeroDeTentativa = 0;
+            char letraDigitada;
 
             Console.WriteLine($"{new string(secreta)}\nA palavra secreta possui {numeroDeLetrasSecretas} letras.\nVocê possui {numeroDeChances} chances!"); // new string converte array char em string    //  Imprime secreta em forma de '-'
 
@@ -41,8 +42,20 @@ namespace CursoCSharp.ProjetosTeste
             {
                 bool acerto = false;
 
-                Console.Write("Digite um letra: ");
-                char letraDigitada = char.Parse(Console.ReadLine());
+                Console.Write("Digite uma letra: ");
+                Digite_uma_letra:
+                try
+                {
+                    letraDigitada = char.Parse(Console.ReadLine());
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("Você digitou mais de uma letra e perdeu uma jogada!");
+                    Console.Write("Digite apenas uma letra: ");
+                    numeroDeChances--;
+                    goto Digite_uma_letra;
+                }
+                
 
                 Console.Clear();  // Limpa tela.
 

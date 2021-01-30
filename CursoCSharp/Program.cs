@@ -8,6 +8,7 @@ using CursoCSharp.ClassesEMetodos;
 using CursoCSharp.Colecoes;
 using CursoCSharp.OO;
 using CursoCSharp.MetodosEFuncoes;
+using CursoCSharp.Excecoes;
 
 namespace CursoCSharp
 {
@@ -17,11 +18,11 @@ namespace CursoCSharp
         {
             var central = new CentralDeExercicios(new Dictionary<string, Action>() {
 
-                // Projetos
+                // Projetos:
                 {"Calculadora - Projetos", ProjetosTeste.Calculadora.Executar},
                 {"Jogo da Forca - Projetos", JogoDaForca.Executar},
 
-                // Fundamentos
+                // Fundamentos:
                 {"Primeiro Programa - Fundamentos", PrimeiroPrograma.Executar},
                 {"Comentario - Fundamentos", Comentarios.Executar},
                 {"Váriaveis e Constantes - Fundamentos", VariaveiisEConstantes.Executar},
@@ -38,7 +39,7 @@ namespace CursoCSharp
                 {"Operadores Unários - Fundamentos", OperadoresUnarios.Executar},
                 {"Operadores Ternário - Fundamentos", OperdorTernario.Executar},
 
-                // Estruturas de Controle
+                // Estruturas de Controle:
                 {"Estrutura If - Estruturas de Controle", EstruturaIf.Executar},
                 {"Estrutura If  Else - Estruturas de Controle", EstruturaIfElse.Executar},
                 {"Estrutura If Elseiif - Estruturas de Controle", EstruturaIfElseiif.Executar},
@@ -50,7 +51,7 @@ namespace CursoCSharp
                 {"Usando Break- Estruturas de Controle", UsandoBreak.Executar},
                 {"Usando Continue- Estruturas de Controle", UsandoContinue.Executar},
 
-                // Classes e Metodos
+                // Classes e Metodos:
                 {"Membros - Classes e Métodos", Membros.Executar},
                 {"Construtores - Classes e Métodos", Construtores.Executar},
                 {"Métodos com Retorno - Classes e Métodos", MetodosComRetorno.Executar},
@@ -69,7 +70,7 @@ namespace CursoCSharp
                 {"Parâmetros por Referência - Classes e Métodos", ParametrosPorReferencia.Executar},
                 {"Parâmetros com valor Padrão - Classes e Métodos", ParametroPadrao.Executar},
 
-                // Coleções
+                // Coleções:
                 {"Array - Coleções", Colecoes.Array.Executar},  // Nome Array já esta atribuido ao sistema. Nescesário dizer qual arquivo você quer.
                 {"List - Coleções", ColecoesList.Executar},
                 {"Array List - Coleções", ColecoesArrayList.Executar},
@@ -79,7 +80,7 @@ namespace CursoCSharp
                 {"Stack (Pilha) - Coleções", ColecaoStack.Executar},
                 {"Dictionary - Coleções", ColocoesDictionary.Executar},
 
-                // OO
+                // OO:
                 {"Herança - OO", Heranca.Executar},
                 {"Construtor This - OO", ConstrutorThis.Executar},
                 {"Encapsulamento - OO", OO.Encapsulamento.Executar},
@@ -88,8 +89,17 @@ namespace CursoCSharp
                 {"Interface - OO", Interface.Executar},
                 {"Sealed - OO", Sealed.Executar},
 
-                // 
+                // Métodos & Funções:
                 {"Lambda - Métodos & Funções", ExemploLambda.Executar},
+                {"Lambdas Como Delegates - Métodos & Funções", LambdasDelegate.Executar},   // Muito útil para funções repetitivas!
+                {"Usando Delegates - Métodos & Funções", UsandoDelegates.Executar},
+                {"Delegate Como Função Anônima - Métodos & Funções", DelegateFunAnonima.Executar},
+                {"Delegates Como Parâmetros - Métodos & Funções", DelegatesComoParametros.Executar},
+                {"Metodos De extensão - Métodos & Funções", MetodosDeExtensao.Executar},
+
+                //Exceçoes:
+                {"Primeira Exceção - Exceções", PrimeiraExcecao.Executar},
+                {"Exceções Personalizadas - Exceções", ExcecoesPersonalizadas.Executar},
 
             });
 
