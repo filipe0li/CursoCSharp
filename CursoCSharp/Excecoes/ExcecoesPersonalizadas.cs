@@ -29,7 +29,7 @@ namespace CursoCSharp.Excecoes
         public static int PositivoPar()
         {
             Random random = new Random();
-            int valor = random.Next(-30, 30);
+            int valor = random.Next(-2, 3);
 
             if (valor < 0)
             {
@@ -38,14 +38,29 @@ namespace CursoCSharp.Excecoes
 
             if (valor % 2 == 1) // Impar
             {
-                throw new NegativoException("Valor impar... :(");
+                throw new ImparExeption("Valor impar... :(");
             }
 
             return valor;   // Se passou pelos testes quer dizer que é positivo e par.
         }
         public static void Executar()
         {
-            // Continua de 7min....
+            try
+            {
+                Console.WriteLine(PositivoPar());
+            }
+            catch (NegativoException ex1)
+            {
+                Console.WriteLine(ex1.Message);
+            }
+            catch (ImparExeption ex2)
+            {
+                Console.WriteLine(ex2.Message);
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Ocorreu um erro inesperado");
+            }
         }
     }
 }

@@ -9,6 +9,8 @@ using CursoCSharp.Colecoes;
 using CursoCSharp.OO;
 using CursoCSharp.MetodosEFuncoes;
 using CursoCSharp.Excecoes;
+using CursoCSharp.Api;
+using CursoCSharp.TopicosAvancados;
 
 namespace CursoCSharp
 {
@@ -16,6 +18,7 @@ namespace CursoCSharp
     {
         static void Main(string[] args) // Main é a porta de entrada C#. Só pode haver 1.   // string[] args server para comandos no terminal.
         {
+            
             var central = new CentralDeExercicios(new Dictionary<string, Action>() {
 
                 // Projetos:
@@ -97,9 +100,26 @@ namespace CursoCSharp
                 {"Delegates Como Parâmetros - Métodos & Funções", DelegatesComoParametros.Executar},
                 {"Metodos De extensão - Métodos & Funções", MetodosDeExtensao.Executar},
 
-                //Exceçoes:
+                // Exceçoes:
                 {"Primeira Exceção - Exceções", PrimeiraExcecao.Executar},
                 {"Exceções Personalizadas - Exceções", ExcecoesPersonalizadas.Executar},
+                
+                // Api:
+                {"Primeiro Arquivo - Usando Api", PrimeiroArquivo.Executar},
+                {"Lendo Arquivos - Usando Api", LendoArquivos.Executar},
+                {"Exemplo FileInfo - Usando Api", ExemploFileInfo.Executar},
+                {"Diretórios - Usando Api", Diretorios.Executar},
+                {"Exemplo DirectoryInfo - Usando Api", ExemploDirectoryInfo.Executar},
+                {"Exemplo Path - Usando Api", ExemploPath.Executar},
+                {"Exemplo DateTime - Usando Api", ExemploDateTime.Executar},
+                {"Exemplo TimeSpan - Usando Api", ExemploTimeSpan.Executar},
+
+                // Tópicos Avançados:
+                {"LINQ #01 - Tópicos Avançados", LINQ1.Executar},
+                {"LINQ #02 - Tópicos Avançados", LINQ2.Executar},
+                {"Nullables - Tópicos Avançados", Nullables.Executar},
+                {"Dynamics - Tópicos Avançados", Dynamics.Executar},
+                {"Genéricos - Tópicos Avançados", Genericos.Executar},
 
             });
 
